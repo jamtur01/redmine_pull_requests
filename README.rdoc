@@ -1,0 +1,36 @@
+= redmine_pull_request
+
+Allows linking Redmine issues to external resources like a third party bug tracker or support system.
+
+== Features
+
+* Enter multiple support urls on each issue
+* Basic text substitution for support ticket ids (https://projects.littlestreamsoftware.com/issues/3902)
+* Issue filter for searching for support urls on the issues list
+* Permissions to control viewing or editing support urls
+
+== Getting the plugin
+
+A copy of the plugin can be downloaded from {Little Stream Software}[https://projects.littlestreamsoftware.com/projects/redmine-simple-sup/files] or from {GitHub}[http://github.com/edavis10/redmine_pull_request]
+
+== Installation and Setup
+
+1. Follow the Redmine plugin installation steps at: http://www.redmine.org/wiki/redmine/Plugins 
+2. Run the plugin migrations +rake db:migrate_plugins+
+3. Restart your Redmine web servers (e.g. mongrel, thin, mod_rails)
+
+== Usage
+
+1. Configure your Base Url to be used under Admin > Plugins > Configure.
+2. Configure the Roles and Permissions you want to use. Admin > Roles and Permissions > Permissions Report > Simple support
+3. Enable the Simple Support module for each project that will use it. Project Settings > Modules
+4. On each issue form, there will now be a Support Urls field that can take a list of support urls. Multiple urls can be entered; put a comma, new line, or space in between each one.
+
+== License
+
+This plugin is licensed under the GNU GPL v2.  See COPYRIGHT.txt and GPL.txt for details.
+
+== Project help
+
+If you need help you can contact the maintainer at the Bug Tracker.  The bug tracker is located at  https://projects.littlestreamsoftware.com
+

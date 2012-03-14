@@ -1,0 +1,10 @@
+<fieldset>
+  <%= content_tag(:p, l(:pull_request_text_settings_help)) %>
+
+  <p>
+    <%= content_tag(:label, l(:pull_request_label_base_url)) %>
+    <%= text_field_tag("settings[base_url]", @settings['base_url'], :size => '60') %><br />
+    <em><%= l(:label_example) %>: <%= l(:pull_request_text_settings_base_url_example) %></em>
+  </p>
+</fieldset>
+
